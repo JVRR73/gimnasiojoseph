@@ -1,0 +1,267 @@
+.navbar-default{
+	background-color: rgba(81,80,80,1.00);
+	margin-bottom: 0px;
+	border: 0px;
+}
+
+.navbar{
+	border-radius:  0px;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fdfdfd;
+}
+
+.navbar-default .navbar-nav:hover > li > a {
+    color: #fff;
+}
+
+body{
+	font-size: 20px;
+}
+.pie1{
+	width: 100%;
+	background-color: rgba(81,80,80,1.00); 
+	color: rgba(255,253,253,1.00);
+	margin-top: 60px;
+}
+
+.pie1 a {
+	color: rgba(0,0,0,1.00);
+}
+
+.pie1 a:hover {
+	color: rgba(255,255,255,1.00);
+	min-width: 100%;
+		
+}
+
+.pie2{
+	min-width:  100%;
+	background-color: #000000;
+	color: rgba(255,253,253,1.00);
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+
+
+
+img{
+    max-width: 100%;
+	
+}
+
+.container-all{
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+	object-position: center;
+}
+
+.slide{
+    display: flex;
+    transform: translate3d(0, 0, 0);
+    transition: all 600ms;
+    animation-name: autoplay;
+    animation-duration: 6.5s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+	object-position: center;
+}
+
+.item-slide{
+    position:sticky;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 100%;
+	object-position: center;
+}
+
+.pagination{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.pagination-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 10px;
+    text-align: center;
+    transition: all 300ms;
+}
+
+.pagination-item:hover{
+    transform: scale(2);
+}
+
+.pagination-item img{
+    display: inline-block;
+    max-width: none;
+    height: 100%;
+    transform: scale(1);
+    opacity: 0;
+    transition: all 300ms;
+}
+
+.pagination-item:hover img{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+input[id="1"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(0, 0, 0);
+}
+
+input[id="1"]:checked ~ .pagination .pagination-item[for="1"]{
+    background: #fff;
+}
+
+input[id="2"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(calc(-100% * 1), 0, 0);
+}
+
+input[id="2"]:checked ~ .pagination .pagination-item[for="2"]{
+    background: #fff;
+}
+
+
+input[id="3"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(calc(-100% * 2), 0, 0);
+}
+
+input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
+    background: #fff;
+}
+
+
+@keyframes autoplay{
+    33%{
+        transform: translate3d(calc(-100% * 0), 0, 0);
+    }
+    
+    66%{
+        transform: translate3d(calc(-100% * 1), 0, 0);
+    }
+    
+    100%{
+        transform: translate3d(calc(-100% * 2), 0, 0);
+    }
+}
+
+
+.espacio{
+	margin-top: 40px;
+	margin-bottom: 50px;
+}
+
+
+
+#titulo{
+	width: 100%;
+	background-color: rgba(108,56,56,1.00);
+	height: 130px;
+	background-image:url(../imagen/../imagen/cabezera.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	display: table;
+}
+
+.subtitulo{
+	color:#fff;
+	margin: auto;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 50px;
+	background-color:rgba(0,0,0,0.74)
+}
+
+
+.form-register{
+	width: 95%;
+	max-width: 500px;
+	margin: auto;
+	background:rgba(128,128,128,1.00);
+	border-radius: 7px;
+	padding: 15px 15px;
+}
+
+
+.form-titulo{
+	background: rgba(203,44,47,1.00);
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	font-weight: 100;
+	font-size: 30px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	border-bottom: 5px solid crimson;
+}
+
+.contenedor-imputs{
+	padding: 10px 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;		
+}
+
+input{
+	margin-bottom: 15px;
+	padding: 15px;
+	font-size: 16px;
+	border-radius: 3px;
+	border: 1px solid darkgray;
+}
+
+.input-48{
+	width: 100%
+}
+
+.input-100{
+	width: 100%;
+	height:100px;
+}
+
+.btn-enviar{
+	background: crimson;
+	color: #fff;
+	margin:auto;
+	padding: 10px 40px;
+	cursor: pointer;
+}
+
+.btn-enviar{
+	transform: scale(1.05)
+}
+.pie1 a {
+    color:rgba(255,255,255,1.00);
+}
